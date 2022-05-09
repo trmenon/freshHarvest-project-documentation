@@ -85,7 +85,7 @@ const NavigationBar = ()=> {
                         <Stack spacing={1}>
                             <Chip
                                 avatar={<Avatar alt="trMenon" src={trmProfile} />}
-                                label="Tushar Ramdas Menon"
+                                label="Tushar"
                                 variant="outlined"
                             />
                             <Stack
