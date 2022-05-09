@@ -19,7 +19,7 @@ function Gate(){
     }
 
     const handleClick = ()=> {
-        navigate("/docs/profile");
+        navigate("/freshHarvest-project-documentation/docs/profile");
     }
 
     return (

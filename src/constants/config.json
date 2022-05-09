@@ -1,7 +1,17 @@
 {
     "routes": [
-        {"id": 1, "name": "profile", "display": "PROFILE", "route": "/docs/profile"},
-        {"id": 2, "name": "launch", "display": "LAUNCH", "route": "/docs/launch"}
+        {
+            "id": 1, 
+            "name": "profile", 
+            "display": "PROFILE", 
+            "route": "/freshHarvest-project-documentation/docs/profile"
+        },
+        {
+            "id": 2, 
+            "name": "launch", 
+            "display": "LAUNCH", 
+            "route": "/freshHarvest-project-documentation/docs/launch"
+        }
     ],
     "profile": [
         {
