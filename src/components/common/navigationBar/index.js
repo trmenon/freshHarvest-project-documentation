@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { useNavigate, useLocation  } from "react-router-dom";
 import config from '../../../constants/config.json';
-
+import trmProfile from '../../../assets/trmProfile.jpg';
 
 // Material UI imports
 import AppBar from '@mui/material/AppBar';
@@ -14,8 +14,15 @@ import { lightGreen } from "@mui/material/colors";
 import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
+import Chip from '@mui/material/Chip';
+import Stack from '@mui/material/Stack';
+import Divider from '@mui/material/Divider';
+import IconButton from '@mui/material/IconButton';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import Link from '@mui/material/Link';
 
-const NavigationBar = (props)=> {
+const NavigationBar = ()=> {
     const navigate = useNavigate();
     const current = useLocation();
     const [state, setState]= useState({
@@ -74,7 +81,32 @@ const NavigationBar = (props)=> {
                                 </Box>
                         </TabContext>
                     </Box>                   
-                   
+                    <Box sx={{py: 1}}>
+                        <Stack spacing={1}>
+                            <Chip
+                                avatar={<Avatar alt="trMenon" src={trmProfile} />}
+                                label="Tushar Ramdas Menon"
+                                variant="outlined"
+                            />
+                            <Stack
+                                direction="row"
+                                divider={<Divider orientation="vertical" flexItem />}
+                                spacing={0}
+                            >
+                                <Link href="https://www.linkedin.com/in/tushar-menon-8314101b7/">
+                                    <IconButton color="secondary">
+                                        <LinkedInIcon/>
+                                    </IconButton>
+                                </Link>
+                                <Link href="https://github.com/trmenon">
+                                    <IconButton color="secondary">
+                                        <GitHubIcon/>
+                                    </IconButton>
+                                </Link>
+                            </Stack>
+                        </Stack>
+                        
+                    </Box>
                 </Toolbar>
             </Container>
         </AppBar>
