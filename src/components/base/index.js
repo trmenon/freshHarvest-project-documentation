@@ -7,8 +7,8 @@ function FreshHarvest(){
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Gate/> }/>
-                <Route path="/docs" element={<Docs/>}>
+                <Route path="https://trmenon.github.io/freshHarvest-project-documentation/" element={<Gate/> }/>
+                <Route path="https://trmenon.github.io/freshHarvest-project-documentation/docs" element={<Docs/>}>
                     <Route path="profile" element={<ProfileWidget/>}/>
                     <Route path="launch" element={<LaunchWidget/>}/>
                 </Route>
