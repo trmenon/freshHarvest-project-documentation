@@ -5,10 +5,10 @@ import { ProfileWidget, LaunchWidget} from '../widgets';
 
 function FreshHarvest(){
     return (
-        <MemoryRouter>
+        <MemoryRouter initialEntries={["http://trmenon.github.io/freshHarvest-project-documentation"]}>
             <Routes>
-                <Route path="/freshHarvest-project-documentation/" element={<Gate/> }/>
-                <Route path="/freshHarvest-project-documentation/docs" element={<Docs/>}>
+                <Route path="/" element={<Gate/> }/>
+                <Route path="/docs" element={<Docs/>}>
                     <Route path="profile" element={<ProfileWidget/>}/>
                     <Route path="launch" element={<LaunchWidget/>}/>
                 </Route>
