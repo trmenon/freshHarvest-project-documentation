@@ -7,11 +7,16 @@ import Box from '@mui/material/Box';
 
 function Docs() {    
     
-    return (        
-        <Box sx={{width: 'auto', mx: 2}}>
-            <NavigationBar/>              
-            <Outlet/>               
-        </Box>
+    return (
+        <React.Fragment>
+            <Box sx={{width: 'auto', px: 4, mt: 2}}>
+                <NavigationBar/>        
+            </Box>
+            <Box sx={{width: 'auto', px: 4, mt: 4}}>
+                <Outlet/>               
+            </Box>
+        </React.Fragment>    
+        
     );
 }
 

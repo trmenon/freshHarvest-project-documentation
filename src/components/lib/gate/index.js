@@ -15,7 +15,9 @@ function Gate(){
         color: "green",
         // backgroundColor: "rgb(240,230,0,0.4)",
         position: "absolute",
-        backgroundImage: `url(${bck})`
+        backgroundImage: `url(${bck})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
     }
 
     const handleClick = ()=> {
