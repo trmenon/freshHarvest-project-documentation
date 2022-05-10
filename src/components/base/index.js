@@ -5,7 +5,7 @@ import { ProfileWidget, LaunchWidget} from '../widgets';
 
 function FreshHarvest(){
     return (
-        <MemoryRouter initialEntries={[""]}>
+        <MemoryRouter initialEntries={["/"]}>
             <Routes>
                 <Route path="/" element={<Gate/> }/>
                 <Route path="/docs" element={<Docs/>}>
