@@ -4,13 +4,13 @@
             "id": 1, 
             "name": "profile", 
             "display": "PROFILE", 
-            "route": "/freshHarvest-project-documentation/docs/profile"
+            "route": "/docs/profile"
         },
         {
             "id": 2, 
             "name": "launch", 
             "display": "LAUNCH", 
-            "route": "/freshHarvest-project-documentation/docs/launch"
+            "route": "/docs/launch"
         }
     ],
     "profile": [

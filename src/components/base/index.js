@@ -1,11 +1,11 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, MemoryRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, MemoryRouter, HashRouter } from 'react-router-dom';
 import {Gate, Docs } from '../lib';
 import { ProfileWidget, LaunchWidget} from '../widgets';
 
 function FreshHarvest(){
     return (
-        <MemoryRouter initialEntries={["/"]}>
+        <HashRouter basename="" hashType='slash'>
             <Routes>
                 <Route path="/" element={<Gate/> }/>
                 <Route path="/docs" element={<Docs/>}>
@@ -13,7 +13,7 @@ function FreshHarvest(){
                     <Route path="launch" element={<LaunchWidget/>}/>
                 </Route>
             </Routes>        
-        </MemoryRouter>
+        </HashRouter>
     );
 }
 
