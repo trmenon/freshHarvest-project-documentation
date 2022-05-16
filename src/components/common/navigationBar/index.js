@@ -16,6 +16,7 @@ import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import Stack from '@mui/material/Stack';
+import AgricultureIcon from '@mui/icons-material/Agriculture';
 
 const NavigationBar = ()=> {
     const navigate = useNavigate();
@@ -42,20 +43,24 @@ const NavigationBar = ()=> {
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Stack 
-                        direction={{xs:"column", md: "row"}} 
+                        direction='row'
                         sx={{flexgrow: 1, mr: 2, py: 1}}
                     >
                         <Avatar
                             alt="Fresh Harvest" 
-                            sx={{ bgcolor: lightGreen[500], width: 46, height: 46 }}
+                            sx={{ 
+                                bgcolor: lightGreen[500], 
+                                width: {xs: 25, md: 45}, 
+                                height: {xs: 25, md: 45} 
+                            }}
                         >
-                            FH                   
+                            <AgricultureIcon/>                   
                         </Avatar>
                         <Typography
-                            variant="h6"
+                            variant='h6'
                             noWrap
                             component="div"
-                            // sx={{ mr: 4 }}
+                            sx={{ display: {xs: 'none', md: 'flex'} }}
                         >                        
                             Fresh Harvest
                         </Typography>
