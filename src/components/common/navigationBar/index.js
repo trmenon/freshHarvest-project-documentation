@@ -41,7 +41,10 @@ const NavigationBar = ()=> {
         <AppBar position="static" color="inherit">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <Stack direction="row" sx={{flexgrow: 1, mr: 2, py: 1}}>
+                    <Stack 
+                        direction={{xs:"column", md: "row"}} 
+                        sx={{flexgrow: 1, mr: 2, py: 1}}
+                    >
                         <Avatar
                             alt="Fresh Harvest" 
                             sx={{ bgcolor: lightGreen[500], width: 46, height: 46 }}
