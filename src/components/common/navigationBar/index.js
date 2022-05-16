@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import { useNavigate, useLocation  } from "react-router-dom";
 import config from '../../../constants/config.json';
 import trmProfile from '../../../assets/trmProfile.jpg';
+import { NameCard} from '../index';
 
 // Material UI imports
 import AppBar from '@mui/material/AppBar';
@@ -14,13 +15,7 @@ import { lightGreen } from "@mui/material/colors";
 import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
-import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
-import Divider from '@mui/material/Divider';
-import IconButton from '@mui/material/IconButton';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import Link from '@mui/material/Link';
 
 const NavigationBar = ()=> {
     const navigate = useNavigate();
@@ -46,20 +41,23 @@ const NavigationBar = ()=> {
         <AppBar position="static" color="inherit">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <Typography
-                        variant="h6"
-                        noWrap
-                        component="div"
-                        sx={{ mr: 4 }}
-                    >
+                    <Stack direction="row" sx={{flexgrow: 1, mr: 2, py: 1}}>
                         <Avatar
                             alt="Fresh Harvest" 
                             sx={{ bgcolor: lightGreen[500], width: 46, height: 46 }}
                         >
                             FH                   
                         </Avatar>
-                        Fresh Harvest
-                    </Typography>
+                        <Typography
+                            variant="h6"
+                            noWrap
+                            component="div"
+                            // sx={{ mr: 4 }}
+                        >                        
+                            Fresh Harvest
+                        </Typography>
+                    </Stack>
+                    
 
                     <Box sx={{ flexGrow: 1, typography: 'body1' }}>
                         <TabContext value={state?.selected}>
@@ -81,31 +79,8 @@ const NavigationBar = ()=> {
                                 </Box>
                         </TabContext>
                     </Box>                   
-                    <Box sx={{py: 1}}>
-                        <Stack spacing={1}>
-                            <Chip
-                                avatar={<Avatar alt="trMenon" src={trmProfile} />}
-                                label="Tushar"
-                                variant="outlined"
-                            />
-                            <Stack
-                                direction="row"
-                                divider={<Divider orientation="vertical" flexItem />}
-                                spacing={0}
-                            >
-                                <Link href="https://www.linkedin.com/in/tushar-menon-8314101b7/">
-                                    <IconButton color="secondary">
-                                        <LinkedInIcon/>
-                                    </IconButton>
-                                </Link>
-                                <Link href="https://github.com/trmenon">
-                                    <IconButton color="secondary">
-                                        <GitHubIcon/>
-                                    </IconButton>
-                                </Link>
-                            </Stack>
-                        </Stack>
-                        
+                    <Box sx={{py: 1, flexGrow: 0}}>                        
+                        <NameCard/>
                     </Box>
                 </Toolbar>
             </Container>
